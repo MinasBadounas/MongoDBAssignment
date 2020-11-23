@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "aa56c7c5-7ebd-4f05-b50d-c8e8a332b0a1",
+		"name": "wellics",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MetricsByDepartment&Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/metrics/?department=departmentA&type=Noise",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"metrics",
+						""
+					],
+					"query": [
+						{
+							"key": "department",
+							"value": "departmentA",
+							"description": "departmentA / departmentB / departmentC"
+						},
+						{
+							"key": "type",
+							"value": "Noise",
+							"description": "Light / Noise / Humidity"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DailyMetricsByDepartment&Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/metrics/daily?department=departmentA&type=Humidity&daysBack=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"metrics",
+						"daily"
+					],
+					"query": [
+						{
+							"key": "department",
+							"value": "departmentA",
+							"description": "departmentA / departmentB / departmentC"
+						},
+						{
+							"key": "type",
+							"value": "Humidity",
+							"description": "Light / Noise / Humidity"
+						},
+						{
+							"key": "daysBack",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WeeklyMetricsByDepartment&Type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/metrics/weekly?department=departmentA&type=Light&weeksBack=50",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"metrics",
+						"weekly"
+					],
+					"query": [
+						{
+							"key": "department",
+							"value": "departmentA",
+							"description": "departmentA / departmentB / departmentC"
+						},
+						{
+							"key": "type",
+							"value": "Light",
+							"description": "Light / Noise / Humidity"
+						},
+						{
+							"key": "weeksBack",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
